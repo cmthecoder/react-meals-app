@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { useGlobalContext } from '../context'
 
 const Search = () => {
-  const { setSearchTerm }  = useGlobalContext()
+  const { setSearchTerm, fetchRandomMeal }  = useGlobalContext()
   const [text, setText] = useState('')
 
   const handleChange = (e) => {
@@ -14,7 +14,7 @@ const Search = () => {
 
     if (text) {
       setSearchTerm(text)
-      setText('')
+      // setText('')
     }
   }
 
@@ -29,7 +29,7 @@ const Search = () => {
           onChange={handleChange}
         />
         <button type='submit' className='btn'>search</button>
-        <button type='submit' className='btn btn-hipster'>surprise me!</button>
+        <button type='submit' className='btn btn-hipster' onClick={fetchRandomMeal}>surprise me!</button>
       </form>
     </header>
   )
