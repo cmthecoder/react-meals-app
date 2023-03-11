@@ -17,7 +17,8 @@ const AppProvider = ({ children }) => {
 
     try {
       const {data} = await axios(url)
-      setMeals(data.meals)
+
+      data.meals ? setMeals(data.meals) : setMeals([])
 
     } catch (error) {
       console.log(error.response)
