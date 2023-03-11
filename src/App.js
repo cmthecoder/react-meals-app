@@ -7,10 +7,10 @@ import Search from './components/Search';
 function App() {
   return (
     <main>
+      <Search />
       {/* <Favorites /> */}
       <Meals />
       {/* <Modal /> */}
-      {/* <Search /> */}
     </main>
   );
 }
