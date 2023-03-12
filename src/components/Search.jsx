@@ -14,8 +14,13 @@ const Search = () => {
 
     if (text) {
       setSearchTerm(text)
-      // setText('')
     }
+  }
+
+  const handleRandomMeal = () => {
+    setSearchTerm('')
+    setText('')
+    fetchRandomMeal()
   }
 
   return (
@@ -29,7 +34,7 @@ const Search = () => {
           onChange={handleChange}
         />
         <button type='submit' className='btn'>search</button>
-        <button type='submit' className='btn btn-hipster' onClick={fetchRandomMeal}>surprise me!</button>
+        <button type='submit' className='btn btn-hipster' onClick={handleRandomMeal}>surprise me!</button>
       </form>
     </header>
   )
